@@ -1,0 +1,67 @@
+# Miscellaneous
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.build/
+.buildlog/
+.history
+.svn/
+.swiftpm/
+migrate_working_dir/
+
+# VS Code
+.vscode/
+
+# IntelliJ / Android Studio
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# Flutter/Dart/Pub
+**/doc/api/
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+build/
+.flutter-*
+generated_plugin_registrant.dart
+
+# iOS
+**/ios/Flutter/.last_build_id
+ios/Flutter/App.framework
+ios/Flutter/Flutter.framework
+ios/Flutter/Flutter.podspec
+ios/Flutter/Generated.xcconfig
+ios/ServiceDefinitions.json
+
+# Android
+/android/app/debug
+/android/app/profile
+/android/app/release
+android/local.properties
+android/key.properties
+
+# Firebase / Google Services
+**/google-services.json
+**/GoogleService-Info.plist
+firebase-debug.log
+
+# Env vars and secrets
+.env
+
+# Symbolication
+app.*.symbols
+
+# Obfuscation
+app.*.map.json
+
+# macOS
+macos/Flutter/GeneratedPluginRegistrant.swift
+macos/Flutter/ephemeral/

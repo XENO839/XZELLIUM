@@ -1,0 +1,76 @@
+name: xzellium
+description: "A futuristic AI career and skill evaluation app."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.8.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  firebase_core: ^3.13.1
+  firebase_auth: ^5.5.4
+  cloud_firestore: ^5.5.2
+  http: ^1.1.0
+  flutter_dotenv: ^5.1.0
+  confetti: ^0.7.0
+  fl_chart: ^0.63.0
+  intl: ^0.18.1
+  pdf: ^3.10.4
+  printing: ^5.12.0
+  fluttertoast: ^8.2.2
+  google_fonts: ^6.1.0
+  percent_indicator: ^4.2.2
+  animate_do: ^2.1.0
+  #speech_to_text: ^6.3.0
+  flutter_tts: ^3.6.3
+  flutter_animate: ^4.2.0
+  open_file: ^3.3.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  flutter_launcher_icons: ^0.14.3
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/icon/xzellium_icon.png"
+  adaptive_icon_foreground: "assets/icon/xzellium_icon_foreground.png"
+  adaptive_icon_background: "#FFFFFF"
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/icon/xzellium_icon.png
+    - assets/icon/xzellium_icon_foreground.png
+    - lib/data/super_domain_questions.json
+    - assets/data/question_banks/software_developer_questions.json
+    - assets/data/question_banks/software_engineer_questions.json
+    - assets/data/question_banks/data_analyst_questions.json
+    - assets/data/question_banks/devops_engineer_questions.json
+    - assets/data/question_banks/ml_engineer_questions.json
+    - assets/data/question_banks/cybersecurity_analyst_questions.json
+    - assets/data/question_banks/database_admin_questions.json
+    - assets/data/question_banks/cloud_engineer_questions.json
+    - assets/fonts/Sora-Bold.ttf
+    - assets/fonts/Inter-Regular.ttf
+    - assets/detailed_report.pdf
+
+
+  fonts:
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/Poppins-Regular.ttf
+        - asset: assets/fonts/Poppins-Bold.ttf
+          weight: 700
+    - family: Inter
+      fonts:
+        - asset: assets/fonts/Inter_18pt-Regular.ttf
+        - asset: assets/fonts/Inter_18pt-Bold.ttf
+          weight: 700
