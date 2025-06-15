@@ -37,7 +37,6 @@ class _ResultScreenState extends State<ResultScreen> {
   Map<String, List<String>> skillTagsByCategory = {};
   String rawInsight = "🧠 Generating your personalized skill report...";
   Map<String, String> parsedInsight = {};
-  String detailedInsight = '';
   bool saved = false;
 
   @override
@@ -56,15 +55,12 @@ class _ResultScreenState extends State<ResultScreen> {
   Future<void> _handleResultFlow() async {
     if (score == 0) {
       setState(() {
-        rawInsight =
-            "😬 You didn’t score any points. Please retake the test to unlock personalized insights.";
+        rawInsight = "😬 You didn’t score any points. Please retake the test.";
         parsedInsight = {
           'Skill Summary': 'N/A',
           'Strengths': 'No strengths identified.',
           'Areas to Improve': 'All areas need improvement.',
         };
-        detailedInsight =
-            "You scored 0%. Retake the assessment after brushing up your skills to get personalized suggestions.";
       });
       return;
     }
@@ -78,7 +74,6 @@ class _ResultScreenState extends State<ResultScreen> {
     );
 
     final shortInsight = await gpt.GptService.fetchInsightFromGPT(shortPrompt);
-
     if (!mounted) return;
 
     setState(() {
@@ -99,7 +94,7 @@ class _ResultScreenState extends State<ResultScreen> {
             'categoryScores': categoryScores,
             'skillTagsByCategory': skillTagsByCategory,
             'shortInsight': shortInsight,
-            'detailedInsight': "dummy_placeholder", // placeholder only
+            'detailedInsight': "dummy_placeholder",
             'domain': widget.domain,
             'timestamp': FieldValue.serverTimestamp(),
           });
@@ -111,7 +106,6 @@ class _ResultScreenState extends State<ResultScreen> {
     final byteData = await rootBundle.load('assets/detailed_report.pdf');
     final directory = await getTemporaryDirectory();
     final filePath = '${directory.path}/Xzellium_Report.pdf';
-
     final file = File(filePath);
     await file.writeAsBytes(byteData.buffer.asUint8List());
     await OpenFile.open(filePath);
@@ -218,6 +212,8 @@ class _ResultScreenState extends State<ResultScreen> {
                           color: Colors.white60,
                           fontSize: 12,
                         ),
+                        overflow: TextOverflow.ellipsis,
+                        maxLines: 2,
                       ),
                     );
                   }

@@ -4,8 +4,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 class GptService {
-  static const _apiKey =
-      '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';
+  static const _apiKey = 'open-api-key';
   static const _endpoint = 'https://api.openai.com/v1/chat/completions';
   static const _model = 'gpt-4o';
 

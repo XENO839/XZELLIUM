@@ -95,23 +95,24 @@ class _AiMentorScreenState extends State<AiMentorScreen> {
     _scrollToBottom();
     await _saveMessage('user', input);
 
-    final contextPrompt = [
+    final contextPrompt = <Map<String, String>>[
       {
         "role": "system",
         "content":
             "You're a friendly and motivational AI mentor for tech students. Keep replies informative, brief, and supportive.",
       },
-      ..._messages
-          .map(
-            (msg) => {
-              'role': msg['role'] == 'user' ? 'user' : 'assistant',
-              'content': msg['text'] ?? '',
-            },
-          )
-          .cast<Map<String, String>>(),
+      ..._messages.map(
+        (msg) => {
+          'role': msg['role'].toString(),
+          'content': msg['text'].toString(),
+        },
+      ),
+      {'role': 'user', 'content': input},
     ];
 
-    final reply = await GptService.fetchInsightFromGPTforChat(contextPrompt);
+    final reply = await GptService.fetchInsightFromGPTforChat(
+      contextPrompt.cast<Map<String, String>>(), // ✅ Fix here
+    );
 
     setState(() {
       _messages.add({
