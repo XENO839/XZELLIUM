@@ -1,21 +1,36 @@
-<<<<<<< HEAD
-# propairx
+# 🚀 Xzellium
 
-A new Flutter project.
+**Your AI-powered career accelerator for tech students.**  
+Xzellium analyzes your skills, simulates real-world interviews, and helps you level up with AI-driven feedback — all in one sleek Flutter app.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## ✨ Features
 
-A few resources to get you started if this is your first Flutter project:
+- ✅ **Super Domain Assessment** – Discover your strengths across core CS domains  
+- 🤖 **AI Mock Interviews** – Practice with GPT-based dynamic voice/text interviews  
+- 🧠 **Personalized Insights** – Get real-time feedback, skill gap analysis & growth plan  
+- 📊 **Detailed Result Reports** – Donut charts, bar graphs & downloadable PDF reports  
+- 🔁 **Challenges & Streaks** – Daily debug tasks and weekly competitive XP challenges  
+- 👥 **Community & Projects** – Collaborate with others, contribute, and grow  
+- 🔒 **Secure Login & Tracking** – Firebase Auth, Firestore sync & skill progress tracking
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+---
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-=======
-# XZELLIUM
-XZELLIUM
->>>>>>> a90e584d5e7a092bf2e1a00042877f84bf68c5b4
+## 🧪 Built With
+
+- 🐦 Flutter 3.22+
+- 🔥 Firebase (Auth, Firestore, Storage)
+- 🤖 OpenAI / Gemini APIs (for insights + mock interviews)
+- 📈 `fl_chart` for result graphs
+- 🧩 `flutter_dotenv` (for secret API key management)
+
+---
+
+## 📦 Installation
+
+```bash
+git clone https://github.com/XENO839/XZELLIUM.git
+cd XZELLIUM
+flutter pub get
+flutter run
